@@ -281,7 +281,8 @@ h1 {
 }
 
 .button,
-.contact-link {
+.contact-link,
+.copy-email {
   min-height: 46px;
   display: inline-flex;
   align-items: center;
@@ -305,8 +306,17 @@ h1 {
   color: var(--ink);
 }
 
+.copy-email {
+  cursor: pointer;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
 .button:hover,
-.contact-link:hover {
+.contact-link:hover,
+.copy-email:hover {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 var(--ink);
 }
@@ -661,6 +671,18 @@ h2 {
   font-size: clamp(0.9rem, 2.8vw, 1rem);
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.contact-actions .contact-link {
+  margin-top: 0;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -819,6 +841,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .project-title p {
+    margin-top: 10px;
+  }
+
   .process-list li {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -857,8 +883,13 @@ h2 {
   }
 
   .button,
-  .contact-link {
+  .contact-link,
+  .copy-email {
     width: 100%;
+  }
+
+  .contact-actions {
+    display: grid;
   }
 
   .capability-strip,

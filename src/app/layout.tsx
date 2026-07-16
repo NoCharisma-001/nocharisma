@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nocharisma.com"),
+  metadataBase: new URL("https://www.nocharisma.com"),
   title: "No Charisma — Independent Idea Factory",
   description:
     "No Charisma is an independent idea factory making digital products, identities, tools and experiments.",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "No Charisma — Independent Idea Factory",
     description:
       "No Charisma is an independent idea factory making digital products, identities, tools and experiments.",
-    url: "https://nocharisma.com",
+    url: "https://www.nocharisma.com",
     siteName: "No Charisma",
     type: "website",
     images: [

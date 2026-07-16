@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CopyEmail } from "./copy-email";
 
 const projects = [
   {
@@ -44,7 +45,7 @@ const projects = [
     status: "In development",
     year: "2026",
     description:
-      "A mobile music tool for singing an idea into a phone and turning the raw vocal sketch into a structured track.",
+      "A mobile music tool for singing a rough idea into a phone and turning the vocal sketch into a structured track.",
   },
   {
     number: "006",
@@ -53,7 +54,7 @@ const projects = [
     status: "Prototype",
     year: "2026",
     description:
-      "A personal style system that reviews a clothing wardrobe, identifies missing pieces and turns taste into a practical shopping brief.",
+      "A style system that reviews a clothing wardrobe, identifies missing pieces and turns taste into a practical shopping brief.",
   },
 ];
 
@@ -104,7 +105,7 @@ function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "No Charisma",
-    url: "https://nocharisma.com",
+    url: "https://www.nocharisma.com",
     description:
       "No Charisma is an independent idea factory making digital products, identities, tools and experiments.",
     inLanguage: "en",
@@ -133,7 +134,7 @@ export default function Home() {
         <a className="identity" href="#top" aria-label="No Charisma home">
           <span className="identity-mark" aria-hidden="true">
             <Image
-              src="/brand/nc-mark.png"
+              src="/brand/nc-mark.svg"
               alt=""
               width={96}
               height={96}
@@ -194,7 +195,7 @@ export default function Home() {
             </div>
             <div className="specimen-logo">
               <Image
-                src="/brand/nc-mark.png"
+                src="/brand/nc-mark.svg"
                 alt="No Charisma logo mark"
                 width={1536}
                 height={1536}
@@ -341,7 +342,7 @@ export default function Home() {
         </div>
         <figure className="brand-artifact">
           <Image
-            src="/brand/no-charisma-hand-logo.png"
+            src="/brand/no-charisma-hand-logo.webp"
             alt="Early No Charisma hand-drawn logo artwork"
             width={1536}
             height={1024}
@@ -363,9 +364,7 @@ export default function Home() {
           Send the thing before it becomes a presentation. The rough edge is
           usually the point.
         </p>
-        <a className="contact-link" href="mailto:hello@nocharisma.com">
-          hello@nocharisma.com
-        </a>
+        <CopyEmail />
       </section>
 
       <footer className="site-footer">
