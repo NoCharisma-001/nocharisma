@@ -134,7 +134,7 @@ export default function Home() {
         <a className="identity" href="#top" aria-label="No Charisma home">
           <span className="identity-mark" aria-hidden="true">
             <Image
-              src="/brand/nc-mark.svg"
+              src="/brand/nc-mark-equal.svg"
               alt=""
               width={96}
               height={96}
@@ -195,7 +195,7 @@ export default function Home() {
             </div>
             <div className="specimen-logo">
               <Image
-                src="/brand/nc-mark.svg"
+                src="/brand/nc-mark-equal.svg"
                 alt="No Charisma logo mark"
                 width={1536}
                 height={1536}

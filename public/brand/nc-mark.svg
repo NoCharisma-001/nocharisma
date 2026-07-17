@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="No Charisma mark">
-  <rect width="640" height="420" fill="#f5f0e8"/>
-  <g fill="#10100e">
-    <path d="M98 312V182c0-72 58-130 130-130s130 58 130 130v130h-68V182c0-34-28-62-62-62s-62 28-62 62v130H98Z"/>
-    <path d="M588 52H486c-72 0-130 58-130 130s58 130 130 130h102v-68H486c-34 0-62-28-62-62s28-62 62-62h102V52Z"/>
-  </g>
-</svg>
