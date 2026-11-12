@@ -24,8 +24,15 @@ export type Project = {
   name: string;
   category: string;
   status: Status;
-  year: string;
+  /** ISO date (YYYY-MM-DD) this entry was last meaningfully changed. */
+  updated: string;
   description: string;
+  /** Source repository, if public. */
+  repo?: string;
+  /** Path under /public to a card image. */
+  image?: string;
+  /** Priority projects get a larger editorial section. */
+  featured?: boolean;
   /** Public destination. Omit until the project has somewhere to go. */
   url?: string;
   /** Label for the action when `url` is set. */
@@ -39,7 +46,7 @@ export const projects: Project[] = [
     name: "No Charisma",
     category: "Identity system",
     status: "live",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "The house system for an independent idea factory. Built to hold tools, objects, writing and unresolved experiments without becoming polite.",
   },
@@ -49,7 +56,7 @@ export const projects: Project[] = [
     name: "Thoughts of a Mad Man",
     category: "Editorial project",
     status: "in-development",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "A written archive for observations too specific to become content and too persistent to stay private.",
   },
@@ -59,7 +66,7 @@ export const projects: Project[] = [
     name: "Few Small Wines",
     category: "Brand experiment",
     status: "prototype",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "A compact identity study for small-run drinking occasions, labels, rituals and the social machinery around them.",
   },
@@ -69,7 +76,7 @@ export const projects: Project[] = [
     name: "Panda Studio",
     category: "Application",
     status: "in-development",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "A practical tool concept for turning rough creative material into something structured enough to use.",
   },
@@ -79,7 +86,7 @@ export const projects: Project[] = [
     name: "Voice to Music",
     category: "Application",
     status: "prototype",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "A browser-based vocal sketchpad for singing a rough idea and hearing it back with harmonised chord accompaniment, built toward a structured track.",
   },
@@ -89,7 +96,7 @@ export const projects: Project[] = [
     name: "Wardrobe Audit",
     category: "AI tool",
     status: "prototype",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "A style system that reviews a clothing wardrobe, identifies missing pieces and turns taste into a practical shopping brief.",
   },
@@ -99,7 +106,7 @@ export const projects: Project[] = [
     name: "Stoop",
     category: "Application",
     status: "prototype",
-    year: "2026",
+    updated: "2026-11-11",
     description:
       "A hyperlocal, place-based social app. Residents are verified, and a post's reach ripples outward from the block it was written on.",
   },

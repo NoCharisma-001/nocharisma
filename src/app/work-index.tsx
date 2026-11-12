@@ -65,8 +65,8 @@ export function WorkIndex() {
                 <dd>{project.category}</dd>
               </div>
               <div>
-                <dt>Year</dt>
-                <dd>{project.year}</dd>
+                <dt>Updated</dt>
+                <dd>{project.updated}</dd>
               </div>
             </dl>
             <div className="project-actions">
