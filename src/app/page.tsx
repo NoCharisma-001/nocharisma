@@ -1,62 +1,6 @@
 import Image from "next/image";
 import { CopyEmail } from "./copy-email";
-
-const projects = [
-  {
-    number: "001",
-    name: "No Charisma",
-    category: "Identity system",
-    status: "Ongoing",
-    year: "2026",
-    description:
-      "The house system for an independent idea factory. Built to hold tools, objects, writing and unresolved experiments without becoming polite.",
-  },
-  {
-    number: "002",
-    name: "Thoughts of a Mad Man",
-    category: "Editorial project",
-    status: "In development",
-    year: "2026",
-    description:
-      "A written archive for observations too specific to become content and too persistent to stay private.",
-  },
-  {
-    number: "003",
-    name: "Few Small Wines",
-    category: "Brand experiment",
-    status: "Prototype",
-    year: "2026",
-    description:
-      "A compact identity study for small-run drinking occasions, labels, rituals and the social machinery around them.",
-  },
-  {
-    number: "004",
-    name: "Panda Studio",
-    category: "Application",
-    status: "In development",
-    year: "2026",
-    description:
-      "A practical tool concept for turning rough creative material into something structured enough to use.",
-  },
-  {
-    number: "005",
-    name: "Voice to Music",
-    category: "Application",
-    status: "In development",
-    year: "2026",
-    description:
-      "A mobile music tool for singing a rough idea into a phone and turning the vocal sketch into a structured track.",
-  },
-  {
-    number: "006",
-    name: "Wardrobe Audit",
-    category: "AI tool",
-    status: "Prototype",
-    year: "2026",
-    description:
-      "A style system that reviews a clothing wardrobe, identifies missing pieces and turns taste into a practical shopping brief.",
-  },
-];
+import { WorkIndex } from "./work-index";
 
 const process = [
   {
@@ -257,34 +201,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="project-index">
-          {projects.map((project) => (
-            <article className="project-row" key={project.number}>
-              <span className="project-number">{project.number}</span>
-              <div className="project-title">
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-              </div>
-              <dl className="project-meta">
-                <div>
-                  <dt>Category</dt>
-                  <dd>{project.category}</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>{project.status}</dd>
-                </div>
-                <div>
-                  <dt>Year</dt>
-                  <dd>{project.year}</dd>
-                </div>
-              </dl>
-              <span className="project-link" aria-label={`${project.name} is ${project.status}`}>
-                {project.status}
-              </span>
-            </article>
-          ))}
-        </div>
+        <WorkIndex />
       </section>
 
       <section className="section factory-section" id="factory" aria-labelledby="factory-title">

@@ -23,4 +23,4 @@ pnpm start
 
 ## Deployment
 
-The production branch is `main` and the intended host is Vercel. Production metadata, canonical URLs, sitemap and robots output all reference `https://nocharisma.com`.
+The production branch is `main` and the intended host is Vercel. Production metadata, canonical URLs, sitemap and robots output all reference `https://www.nocharisma.com`. Make sure the apex `nocharisma.com` 301-redirects to `www` in the Vercel domain settings.
