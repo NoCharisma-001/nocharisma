@@ -527,12 +527,88 @@ h2 {
   color: var(--muted);
 }
 
+.project-actions {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.status-badge,
 .project-link {
-  justify-self: end;
   border: 1px solid var(--ink);
   padding: 8px 10px;
   color: var(--ink);
   text-align: center;
+}
+
+.status-badge[data-status="live"] {
+  background: var(--utility);
+  border-color: var(--utility);
+  color: var(--paper);
+}
+
+.status-badge[data-status="in-development"] {
+  background: var(--signal);
+  border-color: var(--signal);
+  color: var(--ink);
+}
+
+.status-badge[data-status="paused"],
+.status-badge[data-status="coming-soon"] {
+  border-style: dashed;
+  color: var(--ink-soft);
+}
+
+.project-link {
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 28px 0 10px;
+}
+
+.filter-chip {
+  min-height: 44px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  padding: 8px 14px;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-chip span {
+  color: var(--muted);
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.filter-chip[aria-pressed="true"] span {
+  color: var(--paper-dim);
+}
+
+.filter-chip:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 2px;
+}
+
+.work-count {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
 }
 
 .factory-section {
@@ -758,9 +834,10 @@ h2 {
   }
 
   .project-meta,
-  .project-link {
+  .project-actions {
     grid-column: 2;
     justify-self: start;
+    justify-items: start;
   }
 
   .process-list li {
@@ -832,7 +909,7 @@ h2 {
   }
 
   .project-meta,
-  .project-link,
+  .project-actions,
   .process-list p {
     grid-column: auto;
   }
